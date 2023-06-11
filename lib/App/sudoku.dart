@@ -85,7 +85,12 @@ class Sudoku {
   }
 
   void show() {
-    this.display.update(this.board, this.players);
+    List<Player> players;
+
+    players = this.players.sublist(0);
+    players.sort((a, b) => b.score.compareTo(a.score));
+
+    this.display.update(this.board, players);
   }
 
   void play(Player player) {
