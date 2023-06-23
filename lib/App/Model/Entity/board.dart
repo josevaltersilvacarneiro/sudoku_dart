@@ -17,7 +17,7 @@ final class Board {
   List<int> _columnsSum = [];
   int _diagonalSum = 0;
 
-  Board(int dimension) {
+  Board({required int dimension}) {
     this._dimension = dimension;
     this._length = this._dimension * this._dimension;
 
